@@ -1,0 +1,81 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(24, 20, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+}
+#logo {
+    width: 30vw;
+}
+h1 {
+    color: aliceblue;
+}
+#name {
+    color: rgb(177, 14, 241);
+    font-size: 2.9rem;
+    font-weight: 5rem;
+}
+#va {
+    color: rgb(29, 78, 238);
+    font-size: 2.9rem;
+    font-weight: 5rem;
+}
+#voice {
+    width: 200px;
+    display: none;
+}
+#btn {
+    width: 25%;
+    background: linear-gradient(to right, rgb(81, 81, 177), rgb(185, 27, 185), rgb(39, 168, 243));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    border: none;
+    transition: all 0.5s;
+}
+#btn:hover {
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+    body {
+        gap: 20px; /* Reduce gap between elements */
+        flex-direction: column; /* Maintain column layout */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        padding: 0 20px; /* Add padding to avoid edge overflow */
+        height: 100vh; /* Ensure the body takes full height */
+    }
+    #logo {
+        width: 50vw; /* Make logo larger for visibility on smaller screens */
+    }
+    h1 {
+        font-size: 1.5rem; /* Smaller font for headings */
+        text-align: center; /* Center the heading text */
+    }
+    #name, #va {
+        font-size: 2rem; /* Adjust font sizes */
+        text-align: center; /* Center the text */
+    }
+    #btn {
+        width: 50%; /* Make button take more space */
+        font-size: 16px; /* Reduce button text size */
+    }
+}
